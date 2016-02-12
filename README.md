@@ -1,16 +1,14 @@
 # wp-nightwatch-tests
-## First time installs
-Install nightwatch globally (requires node.js and npm): `npm install -g nightwatch`
 
-Download the latest Selenium server following instructions here: http://nightwatchjs.org/guide#installation 
+## Run locally
 
-Create a /bin folder at the project root and put it there, so it matches the "server_path" in nightwatch.json. Notice that we've set Selenium's start process to true, so the server will start automatically when we're running tests.
+`npm install` to install Nightwatch.
 
-To test using Chrome, download the chromedriver binary by following instructions here: https://sites.google.com/a/chromium.org/chromedriver/getting-started 
+Install dependencies a la the included .travis.yml:
 
-Put your chromedriver file in the same /bin folder as your server, again matching the path in nightwatch.json.
+```
+curl https://selenium-release.storage.googleapis.com/2.52/selenium-server-standalone-2.52.0.jar > bin/selenium-server-standalone-2.52.0.jar
+curl -s https://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip | funzip > bin/chromedriver && chmod +x bin/chromedriver
+```
 
-Make your chromedriver file executable: `chmod +x bin/chromedriver`
-
-## Running tests
-As simple as `nightwatch`
+`./runner.sh` to run tests.
