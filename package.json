@@ -1,0 +1,13 @@
+{
+  "name": "wp-nightwatch-tests",
+  "version": "1.0.0",
+  "description": "tests for wordpress using nightwatch",
+  "main": "/bin/false",
+  "repository": "git@github.com:bnchdrff/wp-nightwatch-tests.git",
+  "author": "Benjamin Chodoroff <bc@thermitic.net>",
+  "license": "MIT",
+  "dependencies": {
+    "nightwatch": "^0.9.12",
+    "phantomjs-prebuilt": "^2.1.14"
+  }
+}
